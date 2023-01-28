@@ -15,7 +15,7 @@ class App extends Component {
       <div>
         test
       </div>
-     );
+     )
   }
 }
  
