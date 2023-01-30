@@ -7,7 +7,7 @@
     height: 75vh;
     gap: 16px;
     margin: auto;
-    animation: fadeInAnimation ease 2.5s;
+    animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }

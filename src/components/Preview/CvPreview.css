@@ -4,7 +4,7 @@
     padding: 20px;
     box-shadow: 5px 0 6px 0 hsl(0deg 0% 0% / 20%);
     border-radius: 2px;
-    
+    min-height: 800px;
 }
 
 .previewContent{
@@ -62,7 +62,8 @@ img{
     font-size: .65rem;
 }
 .preview-desc{
-    font-size: .8rem;
+    font-size: .76rem;
+    line-height: 1.5;
 }
 .experience-list, .edu-list{
     width: 100%;

@@ -18,22 +18,46 @@ class CvCreator extends Component {
             description: 'Cupidatat sunt anim incididunt nisi labore sunt nulla Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia. Et deserunt et aliquip voluptate elit cupidatat. Adipisicing enim minim do anim eiusmod est. Irure laboris anim voluptate proident. Cillum reprehenderit est magna minim. Nostrud ex aute laborum ea irure amet ea ipsum ut non minim anim nisi.', 
             experience: [
                 {
-                    id: 0,
-                    company:'Amazon',
-                    position: 'SDE Intern',
-                    startDate: 'Jan 2022',
-                    endDate: 'Jan 2023',
-                    description: '> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, molestias. >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, molestias.'
+                    id: uniqid(),
+                    company:'A Company',
+                    position: 'SWE - II',
+                    startDate: 'Jan 2023',
+                    endDate: 'Present',
+                    description: 'Ut fugiat minim qui voluptate culpa. Elit nostrud ex ad incididunt incididunt eiusmod. Officia cupidatat culpa commodo nisi nostrud.'
+                },
+                {
+                    id: uniqid(),
+                    company:'My First Company',
+                    position: 'Graduate Engineer',
+                    startDate: 'Jan 2020',
+                    endDate: 'Dec 2022',
+                    description: 'Irure dolor incididunt sint et ullamco. Commodo laboris amet aliquip incididunt do ut est exercitation reprehenderit magna sit laboris est mollit.'
+                },
+                {
+                    id: uniqid(),
+                    company:'Tutor',
+                    position: 'University',
+                    startDate: 'Jan 2019',
+                    endDate: 'Nov 2019',
+                    description: 'Enim elit aliquip fugiat anim proident.'
                 }
             ],
             education: [
                 {
                     id: uniqid(),
-                    course: 'B.Tech.',
+                    course: 'Bachelor of Technology (B. Tech.)',
                     university: 'Manipal University Jaipur',
                     startYear: '2020',
                     endYear: '2024',
                     description: 'CGPA: 9'
+                },
+                {
+                    id: uniqid(),
+                    course: 'Fullstack Javascript',
+                    university: 'The Odin Project',
+                    startYear: '2020',
+                    endYear: 'Present',
+                    description: ''
                 }
             ]
           };
