@@ -19,10 +19,10 @@ class CvEdit extends Component {
                         <h4 className='section-title'>Personal Details</h4>
                         <InputField placeholder = "Full Name" name="name" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['name']}/>
                         <InputField placeholder = "Title" name="title" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['title']}/>
-                        <InputField placeholder = "Mobile No." name="mobno" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['mobno']}/>
+                        <InputField placeholder = "Mobile No." name="phone" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['phone']}/>
                         <InputField placeholder = "Email" name="email" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['email']}/>
                         <InputField placeholder = "Location" name="location" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['location']}/>
-                        <InputField placeholder = "Description" name="description" onChange ={this.props.handleDescriptionChange} value = {this.props.personalDetails['description']}/>
+                        <InputField placeholder = "Description" name="description" onChange ={this.props.handleDescriptionChange} value = {this.props.description}/>
                     </section>
                     
                     <section>

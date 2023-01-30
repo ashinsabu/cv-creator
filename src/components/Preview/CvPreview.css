@@ -3,9 +3,42 @@
     border: 1px solid black;
     padding: 20px;
     box-shadow: 5px 0 6px 0 hsl(0deg 0% 0% / 20%);
+    border-radius: 2px;
+    
 }
 .previewContent{
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #81aebb;
+    padding-bottom: 12px;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+}
+.heading > h1{
+    color: #195c70;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+    font-weight: 800;
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+}
+.heading > h2{
+    margin-bottom: 5px;
+    color: #5e5e5e;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 @media only screen and (max-width: 600px) {
     .CvPreview{

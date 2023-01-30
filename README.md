@@ -16,5 +16,5 @@ npm start
 ## Built with
 
 - [React](https://reactjs.org/)
-- [uuid](https://www.npmjs.com/package/uuid)
+- [uniqid](https://www.npmjs.com/package/uniqid)
 - [gh-pages](https://www.npmjs.com/package/gh-pages)
