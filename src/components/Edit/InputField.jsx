@@ -8,7 +8,7 @@ class InputField extends Component {
     }
     render() { 
         return ( 
-            <input type="text" placeholder={this.props.placeholder} className='inputField'></input>
+            <input type="text" placeholder={this.props.placeholder} className='inputField' name={this.props.name} onChange={this.props.onChange}></input>
          );
     }
 }

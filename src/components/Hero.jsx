@@ -12,8 +12,8 @@ class Hero extends Component {
             </div>
             <div>
                 <p>One sheet of paper decides whether you get the job. </p>
-                <p>Isn’t that terrifying?</p>
-                <p>Let us do the heavy lifting. Create an aesthetic, professional CV in minutes, free.</p>
+                <p>Create an aesthetic, professional CV in minutes</p>
+                <p>and download it for free.</p>
             </div>
             <button onClick={this.props.onClick} className='create-cv-button'>Create your CV now</button>
         </div> 

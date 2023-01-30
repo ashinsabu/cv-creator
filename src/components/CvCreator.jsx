@@ -6,15 +6,30 @@ import CvPreview from './Preview/CvPreview';
 class CvCreator extends Component {
     constructor(props) {
         super(props);
-        this.state = 
-        {  }
+        this.state = {
+            personalDetails: {
+              name: '',
+              title: '',
+              phone: '',
+              email: '',
+              location: ''
+            },
+            description: '',
+            experience: [],
+            education: []
+          };
+    }
+    handlePersonalDetailChange(e){
+        let {name, value} = e.target;
+        console.log(name,value);
     }
     render() { 
         return ( 
         <div className='CvCreator'>
             <div className='edit-cv-area'>
                 <p>Edit your CV here</p>
-                <CvEdit/>
+
+                <CvEdit handlePersonalDetailChange={this.handlePersonalDetailChange}/>
             </div>
 
             <div className='preview-cv-area'>
@@ -25,6 +40,7 @@ class CvCreator extends Component {
                         <button id='download-doc-button'>Download as DOC <img src='https://cdn-icons-png.flaticon.com/512/5968/5968517.png' alt='doc'/></button>
                     </div>
                 </div>
+
                 <CvPreview/>
             </div>
 

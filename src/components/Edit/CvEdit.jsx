@@ -16,11 +16,11 @@ class CvEdit extends Component {
                 <form>
                     <section>
                         <h4 className='section-title'>Personal Details</h4>
-                        <InputField placeholder = "Full Name"/>
-                        <InputField placeholder = "Title"/>
-                        <InputField placeholder = "Mobile No."/>
-                        <InputField placeholder = "Email"/>
-                        <InputField placeholder = "Location"/>
+                        <InputField placeholder = "Full Name" name="fullName" onChange ={this.props.handlePersonalDetailChange}/>
+                        <InputField placeholder = "Title" name="title"/>
+                        <InputField placeholder = "Mobile No." name="mobno"/>
+                        <InputField placeholder = "Email" name="email"/>
+                        <InputField placeholder = "Location" name="location"/>
                     </section>
                     <section>
                         <h4 className='section-title'>Work Experience</h4>
