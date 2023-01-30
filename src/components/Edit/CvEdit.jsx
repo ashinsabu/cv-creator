@@ -17,12 +17,12 @@ class CvEdit extends Component {
 
                     <section>
                         <h4 className='section-title'>Personal Details</h4>
-                        <InputField placeholder = "Full Name" name="name" onChange ={this.props.handlePersonalDetailChange}/>
-                        <InputField placeholder = "Title" name="title" onChange ={this.props.handlePersonalDetailChange}/>
-                        <InputField placeholder = "Mobile No." name="mobno" onChange ={this.props.handlePersonalDetailChange}/>
-                        <InputField placeholder = "Email" name="email" onChange ={this.props.handlePersonalDetailChange}/>
-                        <InputField placeholder = "Location" name="location" onChange ={this.props.handlePersonalDetailChange}/>
-                        <InputField placeholder = "Description" name="description" onChange ={this.props.handleDescriptionChange}/>
+                        <InputField placeholder = "Full Name" name="name" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['name']}/>
+                        <InputField placeholder = "Title" name="title" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['title']}/>
+                        <InputField placeholder = "Mobile No." name="mobno" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['mobno']}/>
+                        <InputField placeholder = "Email" name="email" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['email']}/>
+                        <InputField placeholder = "Location" name="location" onChange ={this.props.handlePersonalDetailChange} value = {this.props.personalDetails['location']}/>
+                        <InputField placeholder = "Description" name="description" onChange ={this.props.handleDescriptionChange} value = {this.props.personalDetails['description']}/>
                     </section>
                     
                     <section>
@@ -56,7 +56,7 @@ class CvEdit extends Component {
                                         }} 
                                     />
                                     
-                                    <button className='delete-work-exp-item' onClick={(e) => {
+                                    <button type='button' className='delete-work-exp-item' onClick={(e) => {
                                         e.preventDefault();
                                         this.props.handleDeleteArrayItem('experience',expItem.id);
                                     }}>Delete</button>
@@ -64,7 +64,7 @@ class CvEdit extends Component {
                             );
                         })}
                         
-                        <button className='add-work-exp-item' onClick = {this.props.handleExperienceItemAdd}>Add</button>
+                        <button type='button' className='add-work-exp-item' onClick = {this.props.handleExperienceItemAdd}>Add</button>
                     </section>
                     
                     <section>
@@ -82,12 +82,12 @@ class CvEdit extends Component {
                                             this.props.handleArrayChange('education',eduItem.id,'university',e.target.value)
                                         }} 
                                     />
-                                    <InputField placeholder = "Start Year" value={eduItem.startDate}
+                                    <InputField placeholder = "Start Year" value={eduItem.startYear}
                                         onChange = {(e)=>{
                                             this.props.handleArrayChange('education',eduItem.id,'startYear',e.target.value)
                                         }} 
                                     />
-                                    <InputField placeholder = "End Year" value={eduItem.endDate}
+                                    <InputField placeholder = "End Year" value={eduItem.endYear}
                                         onChange = {(e)=>{
                                             this.props.handleArrayChange('education',eduItem.id,'endYear',e.target.value)
                                         }} 
@@ -98,14 +98,14 @@ class CvEdit extends Component {
                                         }} 
                                     />
                                     
-                                    <button className='delete-edu-item' onClick={(e) => {
+                                    <button type='button' className='delete-edu-item' onClick={(e) => {
                                         e.preventDefault();
                                         this.props.handleDeleteArrayItem('education',eduItem.id);
                                     }}>Delete</button>
                                 </div>
                             );
                         })}
-                        <button className='add-edu-item' onClick={this.props.handleEducationItemAdd}>Add</button>
+                        <button type='button' className='add-edu-item' onClick={this.props.handleEducationItemAdd}>Add</button>
                     </section>
                 </form>
             </div>

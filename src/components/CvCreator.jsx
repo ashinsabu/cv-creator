@@ -9,24 +9,33 @@ class CvCreator extends Component {
         super(props);
         this.state = {
             personalDetails: {
-              name: '',
-              title: '',
-              phone: '',
-              email: '',
-              location: ''
+              name: 'Ashin Sabu',
+              title: 'Web Developer',
+              phone: '1234567890',
+              email: 'ashin.sabu3@gmail.com',
+              location: 'India'
             },
-            description: '',
+            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, molestias. ', 
             experience: [
                 {
                     id: 0,
-                    company:'ms',
-                    position: 'senior',
+                    company:'Amazon',
+                    position: 'SDE Intern',
                     startDate: 'Jan 2022',
                     endDate: 'Jan 2023',
-                    description: 'Finished crazy apps'
+                    description: '> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, molestias. >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, molestias.'
                 }
             ],
-            education: []
+            education: [
+                {
+                    id: uniqid(),
+                    course: 'B.Tech.',
+                    university: 'Manipal University Jaipur',
+                    startYear: '2020',
+                    endYear: '2024',
+                    description: 'CGPA: 9'
+                }
+            ]
           };
           this.handlePersonalDetailChange = this.handlePersonalDetailChange.bind(this);
           this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
@@ -97,9 +106,7 @@ class CvCreator extends Component {
         this.setState((prevState)=>({
             ...prevState,
             [property]: toBeChanged
-        }),()=>{
-            console.log(this.state[property])
-        })
+        }))
     }
     handleDeleteArrayItem(property, id){
         this.setState((prevState) => ({
@@ -127,6 +134,7 @@ class CvCreator extends Component {
 
                 expItems = {this.state.experience} 
                 eduItems = {this.state.education}
+                personalDetails = {this.state.personalDetails}
                 />
             </div>
 
