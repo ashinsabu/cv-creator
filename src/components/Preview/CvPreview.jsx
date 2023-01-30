@@ -10,11 +10,14 @@ class CvPreview extends Component {
         }
     }
     render() { 
+        // destructure
         return ( 
             <div className='CvPreview'>
                 <div className="previewContent">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus veniam autem delectus provident numquam assumenda, voluptates ex in porro quod ratione nulla! Magnam totam alias, saepe laborum animi sed nisi.
+                    {JSON.stringify(this.props.details["personalDetails"])}
                 </div>
+                
             </div>
          );
     }

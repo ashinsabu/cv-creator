@@ -16,19 +16,53 @@ class CvEdit extends Component {
                 <form>
                     <section>
                         <h4 className='section-title'>Personal Details</h4>
-                        <InputField placeholder = "Full Name" name="fullName" onChange ={this.props.handlePersonalDetailChange}/>
-                        <InputField placeholder = "Title" name="title"/>
-                        <InputField placeholder = "Mobile No." name="mobno"/>
-                        <InputField placeholder = "Email" name="email"/>
-                        <InputField placeholder = "Location" name="location"/>
+                        <InputField placeholder = "Full Name" name="name" onChange ={this.props.handlePersonalDetailChange}/>
+                        <InputField placeholder = "Title" name="title" onChange ={this.props.handlePersonalDetailChange}/>
+                        <InputField placeholder = "Mobile No." name="mobno" onChange ={this.props.handlePersonalDetailChange}/>
+                        <InputField placeholder = "Email" name="email" onChange ={this.props.handlePersonalDetailChange}/>
+                        <InputField placeholder = "Location" name="location" onChange ={this.props.handlePersonalDetailChange}/>
+                        <InputField placeholder = "Description" name="description" onChange ={this.props.handleDescriptionChange}/>
                     </section>
                     <section>
                         <h4 className='section-title'>Work Experience</h4>
-                        <InputField placeholder = "Company"/>
-                        <InputField placeholder = "Position"/>
-                        <InputField placeholder = "Start Date"/>
-                        <InputField placeholder = "End Date"/>
-                        <InputField placeholder = "Position"/>
+                        {this.props.expItems.map((expItem)=>{
+                            return (
+                                <div className="work-exp-item" key={expItem.id}>
+                                    <InputField placeholder = "Company" value={expItem.company} 
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('experience',expItem.id,'company',e.target.value)
+                                        }} 
+                                    />
+                                    <InputField placeholder = "Position" value={expItem.position}
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('experience',expItem.id,'position',e.target.value)
+                                        }} 
+                                    />
+                                    <InputField placeholder = "Start Date" value={expItem.startDate}
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('experience',expItem.id,'startDate',e.target.value)
+                                        }} 
+                                    />
+                                    <InputField placeholder = "End Date" value={expItem.endDate}
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('experience',expItem.id,'endDate',e.target.value)
+                                        }} 
+                                    />
+                                    <InputField placeholder = "Description" value={expItem.description}
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('experience',expItem.id,'description',e.target.value)
+                                        }} 
+                                    />
+                                    
+                                    <button className='delete-work-exp-item' onClick={(e) => {
+                                        e.preventDefault();
+                                        this.props.handleDeleteArrayItem('experience',expItem.id);
+                                    }}>Delete</button>
+                                </div>
+                            );
+                        })}
+                        
+                        <button className='add-work-exp-item' onClick = {this.props.handleExperienceItemAdd}>Add</button>
                     </section>
                     <section>
                         <h4 className='section-title'>Education</h4>
@@ -37,6 +71,7 @@ class CvEdit extends Component {
                         <InputField placeholder = "Start Year"/>
                         <InputField placeholder = "End Year"/>
                         <InputField placeholder = "Description(Add CGPA here if necessary)"/>
+                        <button className='add-edu-item'>Add</button>
                     </section>
                 </form>
             </div>

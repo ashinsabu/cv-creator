@@ -3,6 +3,7 @@ import '../styles/App.css';
 import './CvCreator.css'
 import CvEdit from './Edit/CvEdit';
 import CvPreview from './Preview/CvPreview';
+import uniqid from "uniqid";
 class CvCreator extends Component {
     constructor(props) {
         super(props);
@@ -15,13 +16,87 @@ class CvCreator extends Component {
               location: ''
             },
             description: '',
-            experience: [],
+            experience: [
+                {
+                    id: 0,
+                    company:'ms',
+                    position: 'senior',
+                    startDate: 'Jan 2022',
+                    endDate: 'Jan 2023',
+                    description: 'Finished crazy apps'
+                }
+            ],
             education: []
           };
+          this.handlePersonalDetailChange = this.handlePersonalDetailChange.bind(this);
+          this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
+          this.handleArrayChange = this.handleArrayChange.bind(this);
+          this.handleExperienceItemAdd = this.handleExperienceItemAdd.bind(this);
+          this.handleDeleteArrayItem = this.handleDeleteArrayItem.bind(this);
+        //   this.handleEducationItemAdd = this.handleEducationItemAdd.bind(this);
     }
     handlePersonalDetailChange(e){
         let {name, value} = e.target;
-        console.log(name,value);
+        this.setState((prevState) => ({
+            ...prevState,
+            personalDetails: {
+                ...prevState.personalDetails,
+                [name]: value
+            }
+        })
+        // , () => {console.log(this.state);}
+        );
+    }
+
+    handleDescriptionChange(e){
+        let {value} = e.target;
+        this.setState((prevState) => ({
+            ...prevState,
+            description: value
+        }))
+    }
+        
+    handleExperienceItemAdd(e){
+        e.preventDefault();
+        let newExpItem = {
+            id: uniqid(),
+            company:'',
+            position: '',
+            startDate: '',
+            endDate: '',
+            description: ''
+        }
+        this.setState((prevState) => ({
+            ...prevState,
+            experience: [...prevState.experience,newExpItem]
+        }));
+    }
+
+    // handleEducationItemAdd(obj){
+    //     this.setState((prevState) => ({
+    //         ...prevState,
+    //         education: [...prevState.education,obj]
+    //     }))
+    // }
+
+    handleArrayChange(property,id,field,value){
+        let toBeChanged = this.state[property];
+        let modIndex = toBeChanged.findIndex((obj => obj.id === id));
+        toBeChanged[modIndex][field] = value;
+        this.setState((prevState)=>({
+            ...prevState,
+            [property]: toBeChanged
+        }),()=>{
+            console.log(this.state[property])
+        })
+    }
+    handleDeleteArrayItem(property, id){
+        this.setState((prevState) => ({
+            ...prevState,
+            [property]: prevState[property].filter((obj)=>{
+                return obj.id !== id;
+              }),
+        }))
     }
     render() { 
         return ( 
@@ -29,7 +104,15 @@ class CvCreator extends Component {
             <div className='edit-cv-area'>
                 <p>Edit your CV here</p>
 
-                <CvEdit handlePersonalDetailChange={this.handlePersonalDetailChange}/>
+                <CvEdit 
+                handlePersonalDetailChange = {this.handlePersonalDetailChange} 
+                handleDescriptionChange = {this.handleDescriptionChange} 
+                handleExperienceItemAdd = {this.handleExperienceItemAdd}
+                handleArrayChange ={this.handleArrayChange}
+                handleDeleteArrayItem = {this.handleDeleteArrayItem}
+                expItems = {this.state.experience} 
+                eduItems = {this.state.eduItems}
+                />
             </div>
 
             <div className='preview-cv-area'>
@@ -41,7 +124,7 @@ class CvCreator extends Component {
                     </div>
                 </div>
 
-                <CvPreview/>
+                <CvPreview details={this.state}/>
             </div>
 
         </div> );
