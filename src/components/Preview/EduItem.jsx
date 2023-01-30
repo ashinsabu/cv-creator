@@ -16,7 +16,9 @@ class EduItem extends Component {
                         {this.props.eduData.university} | <span className='bold'>{this.props.eduData.startYear} - {this.props.eduData.endYear}</span>
                         
                     </div>
+                    
                 </div>
+                {this.props.eduData.description}
             </div>
          );
     }

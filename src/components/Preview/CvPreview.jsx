@@ -46,7 +46,7 @@ class CvPreview extends Component {
                             </div>
                         </div>
                     </header>
-                    <div className='previewDesc'>
+                    <div className='preview-desc'>
                         {description}
                     </div>
                     <div className="experience-list">

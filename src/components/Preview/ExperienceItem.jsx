@@ -14,8 +14,9 @@ class ExperienceItem extends Component {
                 <div className="experience-details">
                     {this.props.expData.company} | <span className='bold'>{this.props.expData.startDate} - {this.props.expData.endDate}</span>
                 </div>
-                {this.props.expData.description}
+                
             </div>
+            {this.props.expData.description}
         </div> 
         );
     }
