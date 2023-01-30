@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      heroHidden: 0,
+      heroHidden: 1,
     }
     this.hideHero = this.hideHero.bind(this);
   }

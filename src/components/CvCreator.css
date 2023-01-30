@@ -1,0 +1,64 @@
+.CvCreator{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.edit-cv-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.preview-cv-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.preview-title{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+button{
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button > img{
+    width: 16px;
+    margin-left: 4px;
+}
+#download-pdf-button{
+    cursor: pointer;
+    background-color: #c87474;
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+#download-pdf-button:hover{
+    box-shadow: 0 3px 12px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+}
+#download-pdf-button:active{
+    transform: scale(0.95);
+}
+
+#download-doc-button{
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+#download-doc-button:hover{
+    box-shadow: 0 3px 12px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+}
+#download-doc-button:active{
+    transform: scale(0.95);
+}
