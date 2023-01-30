@@ -14,6 +14,7 @@ class CvEdit extends Component {
         return ( 
             <div className='CvEdit'>
                 <form>
+
                     <section>
                         <h4 className='section-title'>Personal Details</h4>
                         <InputField placeholder = "Full Name" name="name" onChange ={this.props.handlePersonalDetailChange}/>
@@ -23,6 +24,7 @@ class CvEdit extends Component {
                         <InputField placeholder = "Location" name="location" onChange ={this.props.handlePersonalDetailChange}/>
                         <InputField placeholder = "Description" name="description" onChange ={this.props.handleDescriptionChange}/>
                     </section>
+                    
                     <section>
                         <h4 className='section-title'>Work Experience</h4>
                         {this.props.expItems.map((expItem)=>{
@@ -64,14 +66,46 @@ class CvEdit extends Component {
                         
                         <button className='add-work-exp-item' onClick = {this.props.handleExperienceItemAdd}>Add</button>
                     </section>
+                    
                     <section>
                         <h4 className='section-title'>Education</h4>
-                        <InputField placeholder = "Course/Program"/>
-                        <InputField placeholder = "University"/>
-                        <InputField placeholder = "Start Year"/>
-                        <InputField placeholder = "End Year"/>
-                        <InputField placeholder = "Description(Add CGPA here if necessary)"/>
-                        <button className='add-edu-item'>Add</button>
+                        {this.props.eduItems.map((eduItem)=>{
+                            return (
+                                <div className="edu-item" key={eduItem.id}>
+                                    <InputField placeholder = "Course/Program" value={eduItem.course} 
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('education',eduItem.id,'course',e.target.value)
+                                        }} 
+                                    />
+                                    <InputField placeholder = "University" value={eduItem.university}
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('education',eduItem.id,'university',e.target.value)
+                                        }} 
+                                    />
+                                    <InputField placeholder = "Start Year" value={eduItem.startDate}
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('education',eduItem.id,'startYear',e.target.value)
+                                        }} 
+                                    />
+                                    <InputField placeholder = "End Year" value={eduItem.endDate}
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('education',eduItem.id,'endYear',e.target.value)
+                                        }} 
+                                    />
+                                    <InputField placeholder = "Description" value={eduItem.description}
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('education',eduItem.id,'description',e.target.value)
+                                        }} 
+                                    />
+                                    
+                                    <button className='delete-edu-item' onClick={(e) => {
+                                        e.preventDefault();
+                                        this.props.handleDeleteArrayItem('education',eduItem.id);
+                                    }}>Delete</button>
+                                </div>
+                            );
+                        })}
+                        <button className='add-edu-item' onClick={this.props.handleEducationItemAdd}>Add</button>
                     </section>
                 </form>
             </div>

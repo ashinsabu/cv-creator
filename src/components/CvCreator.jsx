@@ -31,9 +31,11 @@ class CvCreator extends Component {
           this.handlePersonalDetailChange = this.handlePersonalDetailChange.bind(this);
           this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
           this.handleArrayChange = this.handleArrayChange.bind(this);
+
           this.handleExperienceItemAdd = this.handleExperienceItemAdd.bind(this);
+          this.handleEducationItemAdd = this.handleEducationItemAdd.bind(this);
+
           this.handleDeleteArrayItem = this.handleDeleteArrayItem.bind(this);
-        //   this.handleEducationItemAdd = this.handleEducationItemAdd.bind(this);
     }
     handlePersonalDetailChange(e){
         let {name, value} = e.target;
@@ -72,12 +74,21 @@ class CvCreator extends Component {
         }));
     }
 
-    // handleEducationItemAdd(obj){
-    //     this.setState((prevState) => ({
-    //         ...prevState,
-    //         education: [...prevState.education,obj]
-    //     }))
-    // }
+    handleEducationItemAdd(e){
+        e.preventDefault();
+        let newEduItem = {
+            id: uniqid(),
+            course: '',
+            university: '',
+            startYear: '',
+            endYear: '',
+            description: ''
+        }
+        this.setState((prevState) => ({
+            ...prevState,
+            education: [...prevState.education,newEduItem]
+        }))
+    }
 
     handleArrayChange(property,id,field,value){
         let toBeChanged = this.state[property];
@@ -107,11 +118,15 @@ class CvCreator extends Component {
                 <CvEdit 
                 handlePersonalDetailChange = {this.handlePersonalDetailChange} 
                 handleDescriptionChange = {this.handleDescriptionChange} 
-                handleExperienceItemAdd = {this.handleExperienceItemAdd}
                 handleArrayChange ={this.handleArrayChange}
+
+                handleExperienceItemAdd = {this.handleExperienceItemAdd}
+                handleEducationItemAdd = {this.handleEducationItemAdd}
+
                 handleDeleteArrayItem = {this.handleDeleteArrayItem}
+
                 expItems = {this.state.experience} 
-                eduItems = {this.state.eduItems}
+                eduItems = {this.state.education}
                 />
             </div>
 
