@@ -3,29 +3,43 @@
     display: flex;
     justify-content: center;
     gap: 16px;
+    flex-wrap: wrap;
 }
 .edit-cv-area{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 8px;
+}
+.edit-cv-area > p{
+    height: 32px;
+    display: flex;
+    align-items: center;
 }
 .preview-cv-area{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 8px;
 }
 .preview-title{
     display: flex;
     justify-content: space-between;
     gap: 8px;
+    height: 32px;
+    align-items: center;
+}
+.preview-title > div{
+    display: flex;
+    gap : 8px;
 }
 button{
     padding: 4px 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+
 }
 button > img{
     width: 16px;

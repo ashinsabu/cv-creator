@@ -1,0 +1,31 @@
+.CvEdit{
+    width: 550px;
+}
+form{
+    border: 2px solid grey;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+section > h4{
+    margin-bottom: 5px;
+}
+.section-title{
+    color: #5E5E5E;
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .CvEdit{
+        width: 80vw;
+    }
+}

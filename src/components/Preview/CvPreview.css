@@ -1,0 +1,14 @@
+.CvPreview{
+    width: 550px;
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 5px 0 6px 0 hsl(0deg 0% 0% / 20%);
+}
+.previewContent{
+    padding: 30px;
+}
+@media only screen and (max-width: 600px) {
+    .CvPreview{
+        width: 80vw;
+    }
+  }

@@ -1,0 +1,8 @@
+.inputField{
+    font-size: 0.8rem;
+    border-radius: 3px;
+    width: calc(100%-20px);
+    border: 1px solid grey;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
