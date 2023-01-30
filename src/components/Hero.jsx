@@ -8,9 +8,13 @@ class Hero extends Component {
     render() { 
         return ( 
         <div className='Hero'>
-            <h1>Free and Easy to Use Simple CV Creator</h1>
-            <p>Create an aesthetic, professional CV in minutes, free.</p>
-            <button onClick={this.props.onClick}>Create your CV now</button>
+            <h1>Free and Easy</h1>
+            <h1>to use minimalistic</h1>
+            <h1>CV Creator</h1>
+            <p>One sheet of paper decides whether you get the job. </p>
+            <p>Isn’t that terrifying?</p>
+            <p>Let us do the heavy lifting. Create an aesthetic, professional CV in minutes, free.</p>
+            <button onClick={this.props.onClick} className='create-cv-button'>Create your CV now</button>
         </div> 
         );
     }
