@@ -5,6 +5,7 @@ import React from 'react'
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CvCreator from './components/CvCreator';
+import Footer from './components/Footer';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ class App extends Component {
       <div>
         <Header/>
         {this.state.heroHidden?<CvCreator/>:<Hero onClick = {this.hideHero}/>}
-
+        <Footer/>
       </div>
      )
   }

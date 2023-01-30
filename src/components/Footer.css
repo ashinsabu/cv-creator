@@ -1,0 +1,21 @@
+.Footer{
+    text-align: center;
+}
+img{
+    width: 20px;
+}
+.Footer > p{
+    font-size: 12px;
+}
+.Footer > a{
+    text-decoration: none;
+    color: rgba(66, 66, 66, 0.545);
+    margin-bottom: 4px;
+    font-size: 10px;
+}
+.social-links{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 4px;
+}
