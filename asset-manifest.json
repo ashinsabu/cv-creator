@@ -1,7 +1,7 @@
 {
   "main.css": "/cv-creator/static/css/main.cd1fbf13.chunk.css",
-  "main.js": "/cv-creator/static/js/main.55625972.chunk.js",
-  "main.js.map": "/cv-creator/static/js/main.55625972.chunk.js.map",
+  "main.js": "/cv-creator/static/js/main.2d933fdc.chunk.js",
+  "main.js.map": "/cv-creator/static/js/main.2d933fdc.chunk.js.map",
   "runtime~main.js": "/cv-creator/static/js/runtime~main.51494c94.js",
   "runtime~main.js.map": "/cv-creator/static/js/runtime~main.51494c94.js.map",
   "static/js/2.ef369694.chunk.js": "/cv-creator/static/js/2.ef369694.chunk.js",
@@ -15,7 +15,7 @@
   "static/js/6.af93c14c.chunk.js": "/cv-creator/static/js/6.af93c14c.chunk.js",
   "static/js/6.af93c14c.chunk.js.map": "/cv-creator/static/js/6.af93c14c.chunk.js.map",
   "index.html": "/cv-creator/index.html",
-  "precache-manifest.cc4047fddb0f0c2d96589c1b5e4d0d24.js": "/cv-creator/precache-manifest.cc4047fddb0f0c2d96589c1b5e4d0d24.js",
+  "precache-manifest.a1df1c07ffdc5f01c6a9aa18ed4a900f.js": "/cv-creator/precache-manifest.a1df1c07ffdc5f01c6a9aa18ed4a900f.js",
   "service-worker.js": "/cv-creator/service-worker.js",
   "static/css/main.cd1fbf13.chunk.css.map": "/cv-creator/static/css/main.cd1fbf13.chunk.css.map",
   "static/media/envelope-square-solid.svg": "/cv-creator/static/media/envelope-square-solid.46bb5905.svg",

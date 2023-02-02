@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d14a7d4042ba28925acf",
+    "revision": "2cd34a0bef2cdd08430a",
     "url": "/cv-creator/static/css/main.cd1fbf13.chunk.css"
   },
   {
-    "revision": "d14a7d4042ba28925acf",
-    "url": "/cv-creator/static/js/main.55625972.chunk.js"
+    "revision": "2cd34a0bef2cdd08430a",
+    "url": "/cv-creator/static/js/main.2d933fdc.chunk.js"
   },
   {
     "revision": "0ab90db33b611e143755",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/cv-creator/static/media/map-marker-alt-solid.2b7c48a7.svg"
   },
   {
-    "revision": "55b970d76608c4bd0671aaafc0a84abb",
+    "revision": "0374c34502f4b634f62453d48c572409",
     "url": "/cv-creator/index.html"
   }
 ];
