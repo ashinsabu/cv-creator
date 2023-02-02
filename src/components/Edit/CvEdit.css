@@ -32,16 +32,16 @@ section{
     cursor: pointer;
     padding: 4px 8px;
 }
-.delete-work-exp-item:hover{
+.delete-work-exp-item:hover, .delete-proj-item:hover, .delete-edu-item:hover{
     transform: scale(0.95);
 }
-.delete-work-exp-item:active{
+.delete-work-exp-item:active, .delete-proj-item:active, .delete-edu-item:active{
     transform: scale(0.90);
 }
-.add-work-exp-item{
+.add-work-exp-item, .add-proj-item, .add-edu-item{
     cursor: pointer;
 }
-.delete-edu-item{
+.delete-edu-item, .delete-proj-item{
     align-self: flex-end;
     /* background-color: rgb(233, 94, 94); */
     /* color: white; */
@@ -49,22 +49,7 @@ section{
     cursor: pointer;
     padding: 4px 8px;
 }
-.delete-edu-item:hover{
-    transform: scale(0.95);
-}
-.delete-edu-item:active{
-    transform: scale(0.90);
-}
-.add-edu-item{
-    cursor: pointer;
-}
-.work-exp-item{
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    width: 100%;
-}
-.edu-item{
+.work-exp-item, .edu-item, .proj-item{
     display: flex;
     flex-direction: column;
     gap: 6px;

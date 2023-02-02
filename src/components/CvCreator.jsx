@@ -4,6 +4,9 @@ import './CvCreator.css'
 import CvEdit from './Edit/CvEdit';
 import CvPreview from './Preview/CvPreview';
 import uniqid from "uniqid";
+import { jsPDF } from 'jspdf';
+
+
 class CvCreator extends Component {
     constructor(props) {
         super(props);
@@ -59,16 +62,26 @@ class CvCreator extends Component {
                     endYear: 'Present',
                     description: ''
                 }
+            ],
+            projects: [
+                {
+                    id: uniqid(),
+                    projName: 'Portfolio website',
+                    projTech: 'ReactJS, Redux, Tailwind CSS, Framer Motion',
+                    projDesc: 'Personal Portfolio of projects and work experience with showcase for each. Highly responsive and minimalist UI for quick loading on slow internets.'
+                }
             ]
           };
           this.handlePersonalDetailChange = this.handlePersonalDetailChange.bind(this);
           this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
-          this.handleArrayChange = this.handleArrayChange.bind(this);
+
+          this.handleArrayChange = this.handleArrayChange.bind(this);          
+          this.handleDeleteArrayItem = this.handleDeleteArrayItem.bind(this);
 
           this.handleExperienceItemAdd = this.handleExperienceItemAdd.bind(this);
           this.handleEducationItemAdd = this.handleEducationItemAdd.bind(this);
+          this.handleProjItemAdd = this.handleProjItemAdd.bind(this);
 
-          this.handleDeleteArrayItem = this.handleDeleteArrayItem.bind(this);
     }
     handlePersonalDetailChange(e){
         let {name, value} = e.target;
@@ -122,7 +135,20 @@ class CvCreator extends Component {
             education: [...prevState.education,newEduItem]
         }))
     }
+    handleProjItemAdd(e){
+        e.preventDefault();
+        let newProjItem = {
+            id: uniqid(),
+            projName: '',
+            projTech: '',
+            projDesc: ''
+        }
 
+        this.setState((prevState) => ({
+            ...prevState, 
+            projects: [...prevState.projects,newProjItem]
+        }));
+    }
     handleArrayChange(property,id,field,value){
         let toBeChanged = this.state[property];
         let modIndex = toBeChanged.findIndex((obj => obj.id === id));
@@ -140,7 +166,11 @@ class CvCreator extends Component {
               }),
         }))
     }
+
+    
+
     render() { 
+        
         return ( 
         <div className='CvCreator'>
             <div className='edit-cv-area'>
@@ -158,6 +188,7 @@ class CvCreator extends Component {
 
                 expItems = {this.state.experience} 
                 eduItems = {this.state.education}
+                projItems = {this.state.projects}
                 description = {this.state.description}
                 personalDetails = {this.state.personalDetails}
                 />

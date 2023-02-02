@@ -65,14 +65,14 @@ img{
     font-size: .76rem;
     line-height: 1.5;
 }
-.experience-list, .edu-list{
+.experience-list, .edu-list, .proj-list{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
 }
-.experience-list > h3, .edu-list > h3{
+.experience-list > h3, .edu-list > h3, .proj-list > h3{
     text-transform: uppercase;
     font-weight: 600;
     font-size: .85rem;

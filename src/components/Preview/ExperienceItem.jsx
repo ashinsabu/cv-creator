@@ -3,9 +3,6 @@ import '../../styles/App.css'
 import './ExperienceItem.css'
 
 class ExperienceItem extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() { 
         return ( 
         <div className="experience">

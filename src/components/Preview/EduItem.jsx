@@ -4,9 +4,6 @@ import './EduItem.css'
 import './ExperienceItem.css'
 
 class EduItem extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() { 
         return ( 
             <div className='experience'>

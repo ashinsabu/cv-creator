@@ -6,7 +6,7 @@ class Header extends Component {
     render() { 
         return ( 
         <div className='Header'>
-            <h1><a href='/'>Minimalistic CV Creator</a></h1>
+            <h1><a href='/cv-creator'>Minimalistic CV Creator</a></h1>
         </div> 
         );
     }

@@ -107,6 +107,36 @@ class CvEdit extends Component {
                         })}
                         <button type='button' className='add-edu-item' onClick={this.props.handleEducationItemAdd}>Add</button>
                     </section>
+                    <section>
+                        <h4 className='section-title'>Personal Projects</h4>
+                        {this.props.projItems.map((projItem)=>{
+                            return (
+                                <div className="proj-item" key={projItem.id}>
+                                    <InputField placeholder = "Project Name" value={projItem.projName} 
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('projects',projItem.id,'projName',e.target.value)
+                                        }} 
+                                    />
+                                     <InputField placeholder = "Technologies Used" value={projItem.projTech} 
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('projects',projItem.id,'projTech',e.target.value)
+                                        }} 
+                                    />
+                                     <InputField placeholder = "Project Description" value={projItem.projDesc} 
+                                        onChange = {(e)=>{
+                                            this.props.handleArrayChange('projects',projItem.id,'projDesc',e.target.value)
+                                        }} 
+                                    />
+                                    
+                                    <button type='button' className='delete-proj-item' onClick={(e) => {
+                                        e.preventDefault();
+                                        this.props.handleDeleteArrayItem('projects',projItem.id);
+                                    }}>Delete</button>
+                                </div>
+                            );
+                        })}
+                        <button type='button' className='add-proj-item' onClick={this.props.handleProjItemAdd}>Add</button>
+                    </section>
                 </form>
             </div>
          );
