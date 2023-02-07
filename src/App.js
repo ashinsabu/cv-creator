@@ -1,33 +1,29 @@
 import './styles/App.css';
-import { Component } from 'react';
-
+import { useState, useEffect } from 'react';
 import React from 'react'
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CvCreator from './components/CvCreator';
 import Footer from './components/Footer';
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      heroHidden: 0,
-    }
-    this.hideHero = this.hideHero.bind(this);
+
+function App () {
+  const [heroHidden,setHeroHidden] = useState(0);
+
+  function handleHeroHide (e){
+    if(heroHidden === 0)
+      setHeroHidden(1);
+    else
+      setHeroHidden(0);
   }
-  hideHero(){
-    this.setState({
-      heroHidden: 1,
-    })
-  }
-  render() { 
-    return ( 
-      <div>
-        <Header/>
-        {this.state.heroHidden?<CvCreator/>:<Hero onClick = {this.hideHero}/>}
-        <Footer/>
-      </div>
-     )
-  }
+  
+  return ( 
+    <div>
+      <Header/>
+      {heroHidden?<CvCreator/>:<Hero onClick = {handleHeroHide}/>}
+      <Footer/>
+    </div>
+    )
+  
 }
  
 export default App;
