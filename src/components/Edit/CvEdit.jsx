@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../../styles/App.css';
 import './CvEdit.css';
 import InputField from './InputField';

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../../styles/App.css';
 import './CvPreview.css';
 import phoneSvg from '../../phone-square-solid.svg'
@@ -18,7 +18,7 @@ function CvPreview (props) {
         const location = personalDetails['location'];
 
         return ( 
-            <div className='CvPreview'>
+            <div className='CvPreview' ref={props.innerRef}>
                 <div className="previewContent">
                     <header>
                         <div className="heading">
@@ -45,9 +45,9 @@ function CvPreview (props) {
                     </div>
                     {experience.length?<div className="experience-list">
                         <h3>WORK EXPERIENCE</h3>
-                        {experience.map((exp) => {
+                        {experience.map((exp,index) => {
                             return (
-                                <ExperienceItem expData = {exp} />
+                                <ExperienceItem key={index} expData = {exp} />
                             )
                         })}
                     </div>:''}
@@ -55,18 +55,18 @@ function CvPreview (props) {
                     {education.length?<div className="edu-list">
                         <h3>EDUCATION</h3>
 
-                        {education.map((edu) => {
+                        {education.map((edu,index) => {
                             return (
-                                <EduItem eduData = {edu}/>
+                                <EduItem key={index} eduData = {edu}/>
                             )
                         })}
                     </div>:''}
                     {projects.length?<div className="proj-list">
                         <h3>Projects</h3>
 
-                        {projects.map((proj) => {
+                        {projects.map((proj,index) => {
                             return (
-                                <ProjItem projData = {proj}/>
+                                <ProjItem key={index} projData = {proj}/>
                             )
                         })}
                     </div>:''}

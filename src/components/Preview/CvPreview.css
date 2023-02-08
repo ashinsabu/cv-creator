@@ -1,10 +1,11 @@
 .CvPreview{
-    width: 550px;
+    width: 210mm;
+    height: 297mm;
     border: 1px solid black;
     padding: 20px;
     box-shadow: 5px 0 6px 0 hsl(0deg 0% 0% / 20%);
     border-radius: 2px;
-    min-height: 800px;
+    /* min-height: 800px; */
 }
 
 .previewContent{

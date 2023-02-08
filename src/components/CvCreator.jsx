@@ -1,10 +1,10 @@
-import React, {  useState, useEffect } from 'react'
+import React, {  useState, useRef } from 'react'
 import '../styles/App.css';
 import './CvCreator.css'
 import CvEdit from './Edit/CvEdit';
 import CvPreview from './Preview/CvPreview';
 import uniqid from "uniqid";
-import { jsPDF } from 'jspdf';
+import { useReactToPrint  } from 'react-to-print';
 
 
 function CvCreator(props)  {
@@ -154,7 +154,11 @@ function CvCreator(props)  {
             [property]: newArray,
         })
     }
-  
+    
+    
+    const componentRef = useRef(null);
+    
+    const handlePrint = useReactToPrint({ content: () => componentRef.current})
         
     return ( 
     <div className='CvCreator'>
@@ -181,14 +185,15 @@ function CvCreator(props)  {
 
         <div className='preview-cv-area'>
             <div className='preview-title'>
-                <p>Preview</p>
+                <p>Preview (Preview is viewed better on Desktop)</p>
                 <div>
-                    <button id='download-pdf-button'>Download as PDF<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1667px-PDF_file_icon.svg.png' alt='pdf'/></button>
+                    <button id='download-pdf-button' onClick={handlePrint}>Download as PDF<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1667px-PDF_file_icon.svg.png' alt='pdf'/></button>
                     <button id='download-doc-button'>Download as DOC <img src='https://cdn-icons-png.flaticon.com/512/5968/5968517.png' alt='doc'/></button>
                 </div>
             </div>
 
-            <CvPreview cvData={cv}/>
+            <CvPreview cvData={cv} innerRef = {componentRef}/>
+
         </div>
 
     </div> );
