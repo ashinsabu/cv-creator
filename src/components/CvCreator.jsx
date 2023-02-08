@@ -168,7 +168,7 @@ const CvCreator = () =>  {
 
             handleExperienceItemAdd = {handleExperienceItemAdd}
             handleEducationItemAdd = {handleEducationItemAdd}
-
+            handleProjItemAdd = {handleProjItemAdd}
             handleDeleteArrayItem = {handleDeleteArrayItem}
 
             expItems = {cv[`experience`]} 
