@@ -1,31 +1,31 @@
 self.__precacheManifest = [
   {
-    "revision": "2cd34a0bef2cdd08430a",
+    "revision": "14a0911d782ea25bbecb",
     "url": "/cv-creator/static/css/main.cd1fbf13.chunk.css"
   },
   {
-    "revision": "2cd34a0bef2cdd08430a",
-    "url": "/cv-creator/static/js/main.2d933fdc.chunk.js"
+    "revision": "14a0911d782ea25bbecb",
+    "url": "/cv-creator/static/js/main.0b175c2a.chunk.js"
   },
   {
-    "revision": "0ab90db33b611e143755",
-    "url": "/cv-creator/static/js/runtime~main.51494c94.js"
+    "revision": "8ce447168f6e86a9f7f9",
+    "url": "/cv-creator/static/js/runtime~main.6cca836d.js"
   },
   {
-    "revision": "2acb43db8d29e89f948f",
-    "url": "/cv-creator/static/js/2.ef369694.chunk.js"
+    "revision": "2dfa421d9b71e892fd23",
+    "url": "/cv-creator/static/js/2.c822a32a.chunk.js"
   },
   {
-    "revision": "5e0e78cee7852c445a2c",
-    "url": "/cv-creator/static/js/3.84e172dd.chunk.js"
+    "revision": "e6e6fc6cf00482434723",
+    "url": "/cv-creator/static/js/3.3b410f58.chunk.js"
   },
   {
-    "revision": "b6b88ff6f263386de5a4",
-    "url": "/cv-creator/static/js/4.05b5cf37.chunk.js"
+    "revision": "45192527c25e00ff8620",
+    "url": "/cv-creator/static/js/4.f352b6d6.chunk.js"
   },
   {
-    "revision": "ab0e6470e3e91ce701c8",
-    "url": "/cv-creator/static/js/5.180b1dd0.chunk.js"
+    "revision": "735cd33c63c72cd901ab",
+    "url": "/cv-creator/static/js/5.60989449.chunk.js"
   },
   {
     "revision": "83d14051942d0156f564",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/cv-creator/static/media/map-marker-alt-solid.2b7c48a7.svg"
   },
   {
-    "revision": "0374c34502f4b634f62453d48c572409",
+    "revision": "974e0324b2e891bd5bcb3f5effaad204",
     "url": "/cv-creator/index.html"
   }
 ];

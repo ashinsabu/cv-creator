@@ -1,6 +1,7 @@
 # CV Creator
 
 A React app which allows users to create their own resume using a ready template and download it in a PDF or DOC format.
+Now uses functional components and hooks as of 8 Feb 2023
 
 <a href="https://ashinsabu.github.io/cv-creator/" target="_blank">Live Demo</a> :point_left:
 

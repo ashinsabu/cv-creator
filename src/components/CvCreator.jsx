@@ -7,7 +7,7 @@ import uniqid from "uniqid";
 import { jsPDF } from 'jspdf';
 
 
-const CvCreator = () =>  {
+function CvCreator(props)  {
 
     const templateCvInfo = {
         personalDetails: {
