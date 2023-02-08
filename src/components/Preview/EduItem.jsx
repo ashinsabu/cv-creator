@@ -3,22 +3,19 @@ import '../../styles/App.css'
 import './EduItem.css'
 import './ExperienceItem.css'
 
-class EduItem extends Component {
-    render() { 
+function EduItem (props) {
         return ( 
             <div className='experience'>
                 <div className="experience-heading">
-                    <h4>{this.props.eduData.course}</h4>
+                    <h4>{props.eduData.course}</h4>
                     <div className="experience-details">
-                        {this.props.eduData.university} | <span className='bold'>{this.props.eduData.startYear} - {this.props.eduData.endYear}</span>
-                        
+                        {props.eduData.university} | <span className='bold'>{props.eduData.startYear} - {props.eduData.endYear}</span>
                     </div>
                     
                 </div>
-                {this.props.eduData.description}
+                {props.eduData.description}
             </div>
          );
-    }
 }
  
 export default EduItem;

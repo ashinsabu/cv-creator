@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 import '../../styles/App.css'
 import './ProjItem.css'
 
-class ProjItem extends Component {
-    render() { 
-        return ( 
+function ProjItem (props) {
+    return ( 
         <div className="experience">
             <div className="experience-heading">
-                <h4>{this.props.projData.projName} <span className='proj-tech'>| {this.props.projData.projTech}</span></h4> 
+                <h4>{props.projData.projName} <span className='proj-tech'>| {props.projData.projTech}</span></h4> 
                 
             </div>
-            {this.props.projData.projDesc}
+            {props.projData.projDesc}
         </div> 
-        );
-    }
+    );
 }
  
 export default ProjItem;
