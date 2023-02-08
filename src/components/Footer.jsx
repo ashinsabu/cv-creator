@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import '../styles/App.css'
 import './Footer.css';
 
-class Footer extends Component {
-    render() { 
+function Footer() {
         return ( 
         <div className='Footer'>
             <p>Made with <span role="img" aria-label="love">🖤</span> by Ashin Sabu</p>
@@ -15,7 +14,6 @@ class Footer extends Component {
             </div>
         </div> 
         );
-    }
 }
  
 export default Footer;
