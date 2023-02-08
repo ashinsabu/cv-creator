@@ -10,6 +10,7 @@ function App () {
   const [heroHidden,setHeroHidden] = useState(0);
 
   function handleHeroHide (e){
+    e.preventDefault();
     if(heroHidden === 0)
       setHeroHidden(1);
     else

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import '../styles/App.css' // contains reset and font
 import './Hero.css'
-class Hero extends Component {
-    render() { 
+function Hero(props)  {
         return ( 
         <div className='Hero'>
             <div>
@@ -15,10 +14,9 @@ class Hero extends Component {
                 <p>Create an aesthetic, professional CV in minutes</p>
                 <p>and download it for free.</p>
             </div>
-            <button onClick={this.props.onClick} className='create-cv-button'>Create your CV now</button>
+            <button onClick={props.onClick} className='create-cv-button'>Create your CV now</button>
         </div> 
         );
-    }
 }
  
 export default Hero;
