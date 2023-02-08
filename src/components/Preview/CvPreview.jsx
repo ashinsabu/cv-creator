@@ -7,16 +7,9 @@ import mapMarkerSvg from '../../map-marker-alt-solid.svg'
 import ExperienceItem from './ExperienceItem';
 import EduItem from './EduItem';
 import ProjItem from './ProjItem';
-class CvPreview extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        }
-    }
-    render() { 
+function CvPreview (props) {
         // destructure
-        const { personalDetails , description, experience, education, projects } = this.props.cvData;
+        const { personalDetails , description, experience, education, projects } = props.cvData;
 
         const fullName = personalDetails['name'];
         const title = personalDetails['title'];
@@ -78,10 +71,8 @@ class CvPreview extends Component {
                         })}
                     </div>:''}
                 </div>
-                
             </div>
          );
-    }
 }
  
 export default CvPreview;
