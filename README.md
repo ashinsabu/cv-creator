@@ -13,6 +13,21 @@ cd cv-creator
 npm install
 npm start
 ```
+## Building docker image
+
+Build "cv-creator-deploy" image with 
+
+```
+docker build -t cv-creator-deploy -f Dockerfile.build .
+```
+
+Run cv-creator-deploy image with 
+
+```
+docker run -p 80:80 cv-creator-deploy  
+```
+
+Run locally the same image with
 
 ## Built with
 
